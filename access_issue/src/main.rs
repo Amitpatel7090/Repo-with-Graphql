@@ -2,7 +2,7 @@ use reqwest::blocking::{Client, RequestBuilder};
 use serde_derive::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-struct CreateIssueRequest {
+struct CreateIssueRequest {   // for crating issue
     title: String,
     body: String,
 }
@@ -13,8 +13,8 @@ fn main() {
     let token = "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";
 
     let issue_request = CreateIssueRequest {
-        title: "issue_from-code ".to_string(),
-        body: "This issue is create dy local code.".to_string(),
+        title: " another_issue ".to_string(),
+        body: "This issue  is create dy local code.".to_string(),
     };
 
     if let Err(err) = create_github_issue(owner, repo, token, issue_request) {
