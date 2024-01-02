@@ -1,0 +1,16 @@
+[package]
+name = "issue_with_graphql"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+rocket = "0.5.0"
+async-graphql = "6.0.11"
+async-graphql-rocket = "6.0.11"
+tokio = { version = "1", features = ["full"] }
+rocket_contrib = { version = "0.4.11", features = ["json"] }
+reqwest = {version = "0.11.6",features = ["json"]}
+serde_json = "1.0"
+serde ="1.0"
+dotenv = "0.15.0"
